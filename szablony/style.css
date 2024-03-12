@@ -1,32 +1,4 @@
-body
-{
-margin: 0;
-padding: 0;
-}
-#container
-{
-width: 750px;
-margin-left: auto;
-margin-right: auto;
-border:1px solid black;
-}
-#header
-{
-height: 150px;
-background: #90A4AE;
-}
-#left
-{
-width: 170px;
-float: left;
-background: #FFE57F;
-}
-#right
-{
-width: 580px;
-float: left;
-background: #C5CAE9;
-}
+FFB6C1
 #footer
 {
 clear: both;
