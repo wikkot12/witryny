@@ -1,4 +1,32 @@
-FFB6C1
+body
+{
+margin: 0;
+padding: 0;
+}
+#container
+{
+width: 750px;
+margin-left: auto;
+margin-right: auto;
+border:1px solid black;
+}
+#header
+{
+height: 150px;
+background: #FFE4DC;
+}
+#left
+{
+width: 170px;
+float: left;
+background: #FFE57F;
+}
+#right
+{
+width: 580px;
+float: left;
+background: #FFB6C1;
+}
 #footer
 {
 clear: both;
