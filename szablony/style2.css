@@ -13,28 +13,28 @@ border:1px solid black;
 #header
 {
 height: 150px;
-background: #FFE4DC;
+background: #dcedc8;
 }
 #left
 {
 width: 170px;
 float: left;
-background: #FFE57F;
+background: #F0E68C;
 }
 #right
 {
 width: 580px;
 float: right;
-background: #FFB6C1;
+background: #e0f2f1;
 }
 #main
 {
 width: 580px;
 float: right;
-background: #FFB6C1;
+background: #FFFACD;
 }	
 #footer
 {
 clear: both;
-background: #FFE57F;
+background: #F0E68C;
 }
