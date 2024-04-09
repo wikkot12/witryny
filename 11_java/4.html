@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-2">
+<SCRIPT LANGUAGE= "JavaScript" type= "text/javascript">
+<!-- Ukrycie przed przeglądarkami nie obsługującymi JavaScriptów
+var speed = 20;
+var speedStep = 1;
+var ltop;
+var bottom;
+var direction = 'down';
+var id;
+var iter = 4;
+function ustaw()
+{
+  document.getElementById('ball').style.left = 0;
+  ltop = 0;
+  bottom = document.body.clientHeight - 50;
+}
+y = 0;
+x = 0;
+function start()
+{
+  layer = document.getElementById('ball');
+  y = parseInt(layer.style.top);
+  if (y < bottom && direction == 'down'){
+    y += speedStep++;
+    if (y > bottom){
+      layer.style.top = bottom;
+    }
+    else{
+      layer.style.top = y;
+    }
+    id = setTimeout('start()', speed);
+    return;
+  }
+  else if (y >= bottom && direction == 'down'){
+    direction = 'up';
+    ltop = ltop + Math.ceil((bottom - ltop) / iter);
+    if (ltop >= bottom){
+      clearTimeout(id);
+      return;
+    }
+    id = setTimeout('start()', speed);
+    return;
+  }
+  else if (y > ltop && direction == 'up'){
+    y -= speedStep--;
+    if (y < ltop){
+      layer.style.top = ltop;
+    }
+    else{
+      layer.style.top = y;
+    }
+    id = setTimeout('start()', speed);
+    return;
+  }
+  else if (y <= ltop && direction == 'up'){
+    direction = 'down';
+    if (speedStep%3 == 0) speedStep--;
+    id = setTimeout('start()', speed);
+  }
+}
+// Koniec kodu JavaScript -->
+</SCRIPT>
+</HEAD>
+<BODY onLoad='ustaw();start();'>
+<SCRIPT LANGUAGE= "JavaScript" type= "text/javascript">
+<!-- Ukrycie przed przeglądarkami nie obsługującymi JavaScriptów
+for (i = 0; i < 1;i++){
+  str = '<DIV ID="ball" ';
+  str += 'style = "visibility: visible; ';
+  str += 'width=50px; ';
+  str += 'heigth=45px; ';
+  str += 'position: absolute; ';
+  str += 'top: 1; ';
+  str += 'left: 1;">';
+  str += '<IMG SRC="pilka.gif">';
+  str += '</DIV>';
+  document.write(str);
+}
+// Koniec kodu JavaScript -->
+</SCRIPT>
+<H1 align="center">pilka<H1>
+</BODY>
+</HTML>
+ 
